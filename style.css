@@ -1,0 +1,94 @@
+body {
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.conf {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(./imagenes_integrador_front/ba1.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+    padding: 20% 0;
+}
+
+#conoce {
+    font-weight: lighter;
+    font-size: 12px;
+    margin-bottom: 0%;
+}
+
+#orador-btn {
+    border: solid white 1px;
+}
+
+.btns {
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+.btn-info {
+    color: white;
+    margin: 0 5px;;
+}
+
+.btn-danger {
+    margin: 0 5px;;
+}
+
+.card-title {
+    margin-top: 5px;
+}
+
+.card {
+    padding: 0%;
+}
+
+#holo-img-col {
+    margin: 0;
+    padding: 0%;
+}
+
+#descrip {
+    margin: 0 0 0 1px;
+    border: none;
+}
+
+#conocemas-btn {
+    border: white solid 1px;
+}
+
+#conviertete {
+    font-weight: lighter;
+    font-size: 12px;
+    margin-bottom: 0%;
+}
+
+#comentario {
+    margin: 0 10px;
+    font-weight: lighter;
+}
+
+#coment-descrip {
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+footer {
+    margin-top: 15px;
+    background: linear-gradient(to right,rgb(0, 40, 53),rgb(3, 73, 129));
+}
+
+footer ul {
+    padding: 0 10%;
+    list-style:none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color:white;
+}
