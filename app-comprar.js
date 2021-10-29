@@ -5,31 +5,38 @@ const descuentoJunior = 0.15;
 const container = document.getElementById("seccion");
 const btnBorrar = document.getElementById("btn-borrar");
 const btnResumen = document.getElementById("btn-resumen");
-const categoria = document.getElementById("input-categoria");
-const cantidad = document.getElementById("input-cantidad");
-const resumenTotal = document.getElementById("total")
+const totalOuput = document.getElementById("total")
 let total = 0;
 
-const resumen = ()=> {
+btnResumen.addEventListener('click', (event)=>{
+    event.preventDefault();
+});
+
+btnBorrar.addEventListener('click', (event)=>{
+    window.location.reload();
+})
+
+const resumen = (event) => {
     total = generarResumen();
-    resumenTotal.innerHTML = `${total}`
+    totalOuput.innerHTML = `${total}`
 }
 
 function generarResumen() {
-    if(categoria.value == 'estudiante') {
-        let descuentoAplicado = precio * descuentoEstudiante;
+    let categoria = document.getElementById("input-categoria");
+    let cantidad = parseFloat(document.getElementById("input-cantidad").value);
+    if (categoria.value == 'estudiante') {
+        let descuentoAplicado = precio -(precio * descuentoEstudiante);
         total = descuentoAplicado * cantidad;
-    } else if (categoria.value == 'trainee'){
-        let descuentoAplicado = precio * descuentoTrainee;
+    } else if (categoria.value == 'trainee') {
+        let descuentoAplicado = precio - (precio * descuentoTrainee);
         total = descuentoAplicado * cantidad;
-    } else if (categoria.value == 'junior'){
-        let descuentoAplicado = precio * descuentoJunior;
+    } else if (categoria.value == 'junior') {
+        let descuentoAplicado = precio - (precio * descuentoJunior);
         total = descuentoAplicado * cantidad;
     }
-    console.log(total);
     return total;
 }
 
 const paginaPrincipal = () => {
-    window.location.href="./index.html";
+    window.location.href = "./index.html";
 }
